@@ -10,10 +10,11 @@ public class Maze {
         int fRow = 2;
         int fcol = 0 ;
         int[][] bombs = {{0,0} ,{2,2}};
-//        for (int[] bomb:bombs) {
-//
-//            maze[row][col]= 1;
-//        }
+        for (int[] bomb:bombs) {
+           int row = bomb[0];
+           int col = bomb[1];
+            maze[row][col]= 1;
+        }
         mazePath(maze ,cRow , cCol ,fRow ,fcol ,"");
 
     }

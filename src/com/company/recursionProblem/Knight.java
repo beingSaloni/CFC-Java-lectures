@@ -7,7 +7,7 @@ public class Knight {
 //18 1 6 21 10
 //7 12 23 16 3
 //24 17 2 11 22
-        static int N = 5;
+        static int N = 8;
 
         /* A utility function to check if i,j are
         valid indexes for N*N chessboard */

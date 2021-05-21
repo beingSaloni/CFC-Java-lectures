@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class KnightTour2 {
     public static void main(String[] args) {
-        int[][] board = new int[9][9];
+        int[][] board = new int[8][8];
 
         for (int[] row : board) {
             Arrays.fill(row, -1);
@@ -14,12 +14,16 @@ public class KnightTour2 {
         int row = 0;
         int col = 0;
 
-        tour(board, row, col, 0);
+        if(tour(board, row, col, 0)){
+            System.out.println("VALID");
+        }else {
+            System.out.println("Not valid");
+        }
     }
 
     private static boolean tour(int[][] board, int row, int col, int step) {
 
-        if(step >=81){
+        if(step >=64){
             for (int[] rowboard : board) {
                 System.out.println(Arrays.toString(rowboard));
 
@@ -28,7 +32,7 @@ public class KnightTour2 {
             return true;
         }
 
-        if(row < 0 || row >= 9 || col < 0 || col >= 9){
+        if(row < 0 || row >= 8|| col < 0 || col >= 8){
             return false;
         }
 
